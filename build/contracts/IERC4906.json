@@ -333,7 +333,7 @@
     "absolutePath": "@openzeppelin/contracts/interfaces/IERC4906.sol",
     "exportedSymbols": {
       "IERC165": [
-        1888
+        1962
       ],
       "IERC4906": [
         24
@@ -389,7 +389,7 @@
               "id": 8,
               "name": "IERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1888,
+              "referencedDeclaration": 1962,
               "src": "248:7:1"
             },
             "id": 9,
@@ -423,7 +423,7 @@
         "linearizedBaseContracts": [
           24,
           1070,
-          1888
+          1962
         ],
         "name": "IERC4906",
         "nameLocation": "236:8:1",
@@ -569,7 +569,7 @@
     "absolutePath": "@openzeppelin/contracts/interfaces/IERC4906.sol",
     "exportedSymbols": {
       "IERC165": [
-        1888
+        1962
       ],
       "IERC4906": [
         24
@@ -625,7 +625,7 @@
               "id": 8,
               "name": "IERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1888,
+              "referencedDeclaration": 1962,
               "src": "248:7:1"
             },
             "id": 9,
@@ -659,7 +659,7 @@
         "linearizedBaseContracts": [
           24,
           1070,
-          1888
+          1962
         ],
         "name": "IERC4906",
         "nameLocation": "236:8:1",
@@ -807,7 +807,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.5",
-  "updatedAt": "2023-10-25T15:57:36.780Z",
+  "updatedAt": "2023-10-25T16:02:11.659Z",
   "devdoc": {
     "events": {
       "BatchMetadataUpdate(uint256,uint256)": {

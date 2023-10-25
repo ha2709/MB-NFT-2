@@ -384,7 +384,7 @@
         1623
       ],
       "ERC165": [
-        1876
+        1950
       ],
       "ERC721": [
         954
@@ -393,7 +393,7 @@
         1244
       ],
       "IERC165": [
-        1888
+        1962
       ],
       "IERC4906": [
         24
@@ -408,13 +408,13 @@
         1088
       ],
       "Math": [
-        2754
+        2828
       ],
       "SignedMath": [
-        2859
+        2933
       ],
       "Strings": [
-        1852
+        1926
       ]
     },
     "id": 1245,
@@ -501,8 +501,8 @@
           1271,
           24,
           1070,
-          1876,
-          1888,
+          1950,
+          1962,
           1623
         ],
         "name": "ERC721URIStorage",
@@ -516,7 +516,7 @@
               "id": 1098,
               "name": "Strings",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1852,
+              "referencedDeclaration": 1926,
               "src": "358:7:6"
             },
             "nodeType": "UsingForDirective",
@@ -581,7 +581,7 @@
           {
             "baseFunctions": [
               121,
-              1887
+              1961
             ],
             "body": {
               "id": 1127,
@@ -796,7 +796,7 @@
                   "id": 1110,
                   "name": "IERC165",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1888,
+                  "referencedDeclaration": 1962,
                   "src": "619:7:6"
                 }
               ],
@@ -2309,7 +2309,7 @@
         1623
       ],
       "ERC165": [
-        1876
+        1950
       ],
       "ERC721": [
         954
@@ -2318,7 +2318,7 @@
         1244
       ],
       "IERC165": [
-        1888
+        1962
       ],
       "IERC4906": [
         24
@@ -2333,13 +2333,13 @@
         1088
       ],
       "Math": [
-        2754
+        2828
       ],
       "SignedMath": [
-        2859
+        2933
       ],
       "Strings": [
-        1852
+        1926
       ]
     },
     "id": 1245,
@@ -2426,8 +2426,8 @@
           1271,
           24,
           1070,
-          1876,
-          1888,
+          1950,
+          1962,
           1623
         ],
         "name": "ERC721URIStorage",
@@ -2441,7 +2441,7 @@
               "id": 1098,
               "name": "Strings",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1852,
+              "referencedDeclaration": 1926,
               "src": "358:7:6"
             },
             "nodeType": "UsingForDirective",
@@ -2506,7 +2506,7 @@
           {
             "baseFunctions": [
               121,
-              1887
+              1961
             ],
             "body": {
               "id": 1127,
@@ -2721,7 +2721,7 @@
                   "id": 1110,
                   "name": "IERC165",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1888,
+                  "referencedDeclaration": 1962,
                   "src": "619:7:6"
                 }
               ],
@@ -4230,7 +4230,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.5",
-  "updatedAt": "2023-10-25T15:57:36.810Z",
+  "updatedAt": "2023-10-25T16:02:11.708Z",
   "devdoc": {
     "details": "ERC721 token with storage based token URI management.",
     "kind": "dev",
