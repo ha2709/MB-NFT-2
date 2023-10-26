@@ -5,7 +5,7 @@ import WebModal from "web3modal"
 import axios from 'axios';
 // import React from 'react';
 import Swal from 'sweetalert2';
-const { Web3Provider } = ethers.providers;
+const { getDefaultProvider } = ethers;
 // const ethers = require("ethers")
 
 /**
@@ -79,21 +79,22 @@ class MetaMask {
           }
   
           try {
-            // Create a provider
-            const provider = ethers.getDefaultProvider();
-            // Use a JSON-RPC provider that supports signing, such as JsonRpcProvider
-            const jsonRpcProvider = new ethers.providers.JsonRpcProvider();
-            const signer = jsonRpcProvider.getSigner();
+           console.log(ethers)
+    // Web3 browser user detected. You can now use the provider.
+    const accounts = await window.ethereum.enable();
+    // const curProvider = window['ethereum'] || window.web3.currentProvider
 
-            const address = await signer.getAddress();
-            console.log('Signer address:', address);
-            console.log(84, provider)
-            this.signer = await provider.getSigner();
-            this.provider = provider;
-            console.log(87, provider)
+    const provider = new ethers.getDefaultProvider();
+            console.log(88, provider)
+      console.log('accounts: ', accounts);
+      console.log('provider: ', provider);
+
+    const signer =  provider.getSigner();
+            // this.provider = provider;
+            // console.log(87, provider)
   
           } catch (e) {
-              throw new Error(e.message);
+              throw new Error(e);
           }
   
           return new Promise(async (resolve, reject) => {
