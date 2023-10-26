@@ -1,11 +1,11 @@
  
-import { getDefaultProvider } from "ethers";
+import { ethers } from 'ethers';
 
-
+import WebModal from "web3modal"
 import axios from 'axios';
 // import React from 'react';
 import Swal from 'sweetalert2';
- 
+const { Web3Provider } = ethers.providers;
 // const ethers = require("ethers")
 
 /**
@@ -79,40 +79,47 @@ class MetaMask {
           }
   
           try {
-            
-              const provider = new getDefaultProvider(window.ethereum);
-              
-              this.signer = await provider.getSigner();
-              this.provider = provider;
+            // Create a provider
+            const provider = ethers.getDefaultProvider();
+            // Use a JSON-RPC provider that supports signing, such as JsonRpcProvider
+            const jsonRpcProvider = new ethers.providers.JsonRpcProvider();
+            const signer = jsonRpcProvider.getSigner();
+
+            const address = await signer.getAddress();
+            console.log('Signer address:', address);
+            console.log(84, provider)
+            this.signer = await provider.getSigner();
+            this.provider = provider;
+            console.log(87, provider)
   
           } catch (e) {
               throw new Error(e.message);
           }
   
           return new Promise(async (resolve, reject) => {
-              this.network = await this.provider.getNetwork().then(async (response) => {
-                  const { chainId } = response;
-                  console.log(94, chainId)
-                  // @ts-ignore
-                  // this.getAddresses(chainId);
-                  // this.getContracts();
+              // this.network = await this.provider.getNetwork().then(async (response) => {
+              //     // const { chainId } = response;
+              //     console.log(94, response)
+              //     // @ts-ignore
+              //     // this.getAddresses(chainId);
+              //     // this.getContracts();
   
-                  resolve({
-                      // @ts-ignore
-                      currentAddress: MetaMask.instance().selectedAddress,
+              //     resolve({
+              //         // @ts-ignore
+              //         currentAddress: MetaMask.instance().selectedAddress,
                       
-                      // addresses: this.addresses,
-                      // contracts: this.contracts,
-                      signer: this.signer,
-                      getEthBalance: async () => {
-                        return await this.provider.getBalance(this.instance.selectedAddress.toString().toLowerCase());
-                    },
+              //         // addresses: this.addresses,
+              //         // contracts: this.contracts,
+              //         signer: this.signer,
+              //       //   getEthBalance: async () => {
+              //       //     return await this.provider.getBalance(this.instance.selectedAddress.toString().toLowerCase());
+              //       // },
                       
                     
-                  });
-              }).catch((error) => {
-                  reject(error);
-              });
+              //     });
+              // }).catch((error) => {
+              //     reject(error);
+              // });
           });
       }
   }
