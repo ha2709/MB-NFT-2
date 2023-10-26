@@ -1,10 +1,12 @@
-import Web3Modal from 'web3modal';
-import { BrowserProvider } from "ethers";
-import axios from 'axios';
-import React from 'react';
-import Swal from 'sweetalert2';
-const ethers = require("ethers")
+ 
+import { getDefaultProvider } from "ethers";
 
+
+import axios from 'axios';
+// import React from 'react';
+import Swal from 'sweetalert2';
+ 
+// const ethers = require("ethers")
 
 /**
  * MetaMask
@@ -77,10 +79,9 @@ class MetaMask {
           }
   
           try {
-              // const web3Modal = new Web3Modal();
-              // const connection = await web3Modal.connect();
-              const provider = new BrowserProvider(window.ethereum);
-              // const provider = await (new Web3Provider(connection));
+            
+              const provider = new getDefaultProvider(window.ethereum);
+              
               this.signer = await provider.getSigner();
               this.provider = provider;
   

@@ -11,3 +11,5 @@ https://medium.com/@abhishekranjandev/a-step-by-step-guide-to-building-your-firs
 migrate
 
 ## Goerli : `0x87bca5b2599ad04f56d7542c97b078fe898517a7`
+
+`npm install --force`
